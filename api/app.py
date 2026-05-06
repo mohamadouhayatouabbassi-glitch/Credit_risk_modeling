@@ -6,7 +6,13 @@ from src.config import MODEL_PATH, FEATURES, DEFAULT_THRESHOLD
 from api.schemas import CreditApplication, PredictionOut
 
 app = FastAPI(title="Credit Risk Scoring API")
-
+@app.get("/")
+def root():
+    return {
+        "service": "Credit Risk Scoring API",
+        "status": "ok",
+        "endpoints": ["/health", "/docs"]
+    }
 model = None
 
 @app.on_event("startup")
