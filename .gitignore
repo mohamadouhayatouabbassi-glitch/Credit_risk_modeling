@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# Data locale
+data/credit_risk_dataset.csv
+
+# Artifacts générés
+artifacts/metrics.json
